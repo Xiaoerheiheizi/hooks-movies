@@ -40,13 +40,10 @@ const reducer = (state, action) => {
 	}
 };
 
-
-
 const App = () => {
 	const [state, dispatch] = useReducer(reducer, initialState);
 
 	useEffect(() => {
-
 		fetch(MOVIE_API_URL)
 			.then(response => response.json())
 			.then(jsonResponse => {
